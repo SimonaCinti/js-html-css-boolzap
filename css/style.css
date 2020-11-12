@@ -28,10 +28,11 @@ body {
 }
 
 p.small{
-    color: #447a8c;
-    font-size: 14px;
-    text-decoration: underline;
+    color: #697376;
+    font-size: 14px; 
 }
+
+
 
 .flex {
     display: flex;
@@ -145,6 +146,8 @@ p.small{
 
 .notification-text p.small {
     cursor: pointer;
+    text-decoration: underline;
+    color: #447a8c;
 }
 
 /* Search Bar */
@@ -174,10 +177,16 @@ p.small{
 .list-contact .contact {
     align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.6s;
 }
 
 .contact .avatar{
     margin-right: 20px;
+}
+
+.contact:hover {
+    background-color: #eaeaea;
 }
 
 /* Content */
@@ -186,4 +195,42 @@ p.small{
 .content .footer-content {
     background-color: #eaeaea;
     align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Content | Header */
+
+.header-content .contact {
+    max-height: 80px;
+    align-items: center;
+    background-color:#eaeaea;
+    padding-left: 20px;
+}
+
+.header-content .contact-data {
+  flex-direction: column;
+}
+
+.contact-data-right i  {
+    font-size: 20px;
+    padding-right: 10px;
+    color: #b1b1b1;
+    cursor: pointer;
+}
+
+/* Content | Footer */
+
+.footer-content i {
+    color: #697376;
+    font-size: 20px;
+}
+
+.footer-content input {
+    flex-basis: 90%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 50px;
+    padding: 0 20px;
 }
