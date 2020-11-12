@@ -51,7 +51,7 @@
             <ul class="list-contact">
                 <li v-for="(contact, index) in contacts" class="contact flex">
                     <div class="avatar">
-                        <img src="./img/avatar_1.jpg" alt="">
+                        <img :src="avatar(contact)" alt="">
                     </div>
                     <p>{{ contact.name }}</p>
                 </li>

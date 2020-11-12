@@ -94,7 +94,12 @@ var app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        image: '',
     },
-    methods: {}
+    methods: {
+        avatar(contact){
+            return `./img/avatar`+contact.avatar+`.jpg`
+        }
+    }
 });
