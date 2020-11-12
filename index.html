@@ -23,9 +23,9 @@
             <div class="user-id pd-20">
                 <div class="user-id-left">
                    <div class="avatar">
-                        <img src="./img/avatar_io.jpg" alt="">
+                        <img :src="myid(user)" alt="">
                     </div> 
-                    <p>Nome Utente</p>
+                    <p>{{user.name}}</p>
                 </div>
                 <div class="user-id-right">
                     <i class="fas fa-circle-notch"></i>
