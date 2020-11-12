@@ -55,7 +55,6 @@ p.small{
 /* Container */
 
 .container {
-    display: flex;
     width: 90%;
     min-width: 900px;
     height: 90vh;
@@ -64,7 +63,6 @@ p.small{
 /*  Container | Content */
 
 .container .content {
-    display: flex;
     flex-direction: column;
     flex-basis: 65%;
 }
