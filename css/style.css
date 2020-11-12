@@ -20,6 +20,12 @@ body {
     );
 }
 
+/* Utilities */
+
+.pd-20 {
+    padding: 20px;
+}
+
 /* Container */
 
 .container {
@@ -28,13 +34,6 @@ body {
     min-width: 900px;
     background:#ab6363; /*!debug*/
     height: 90vh;
-}
-
-
-/* Container | Nav Bar */
-.container .nav-bar {
-    flex-basis: 35%;
-    background-color: #ffffff; 
 }
 
 /*  Container | Content */
@@ -47,11 +46,54 @@ body {
 
 .content .header-content,
 .content .footer-content {
-    padding: 20px;
     background-color: blue; /*!debug*/
 }
 
 .content .main-content {
     flex-grow: 1;
-    padding: 20px;
     background-image: url('../img/mine.jpg');
+}
+
+/* Container | Nav bar */
+
+.container .nav-bar{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+    background-color: #ffffff; 
+}
+
+.nav-bar .user-id {
+    flex-basis: 50px;
+    display: flex;
+    align-items: center;
+    background-color: red; /*!debug*/
+}
+
+.nav-bar .notification {
+    display: flex;
+    align-items: center;
+    flex-basis: 50px;
+    background-color: brown;
+}
+
+/*  Nav bar | user id */
+
+.nav-bar .user-id {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar .user-id  .avatar {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.avatar img {
+    height: 100%;
+}
+
+
