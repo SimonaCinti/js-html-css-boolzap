@@ -32,8 +32,6 @@ p.small{
     font-size: 14px; 
 }
 
-
-
 .flex {
     display: flex;
 }
@@ -41,7 +39,6 @@ p.small{
 .align-center{
     align-items: center;
 }
-
 
 .avatar {
     height: 60px;
@@ -61,16 +58,15 @@ p.small{
     display: flex;
     width: 90%;
     min-width: 900px;
-    background:#ab6363; /*!debug*/
     height: 90vh;
 }
 
 /*  Container | Content */
+
 .container .content {
     display: flex;
     flex-direction: column;
     flex-basis: 65%;
-    background-color: pink; /*!debug*/
 }
 
 .content .header-content,
@@ -159,18 +155,22 @@ p.small{
 
 .search i {
     position: absolute;
-    top: 28px;
+    top: 33px;
     left: 30px;
     color:  #b1b1b1;
 }    
 
 .search input{
-    height: 30px;
+    height: 40px;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 35px;
     /* border: 1px solid  #fafafa9c; */
     border: 2px solid  #1414141a; /*!debug*/
     outline: none;
+}
+
+.search input::placeholder {
+  color: #b1b1b1 
 }
 
 /* List Contact */
