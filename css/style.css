@@ -129,6 +129,7 @@ p.small{
     flex-basis: 80px;
     max-height: 80px;
     background-color: #74dcff;
+    border: none;
 }
 
 .notification .notification-text {
