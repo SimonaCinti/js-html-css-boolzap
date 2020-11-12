@@ -15,24 +15,39 @@ body {
         to bottom,
         #009688 0%,
         #009688 15%,
-        #d2dbcd 15%,
-        #d2dbcd 100%
+        #d7dbd4 15%,
+        #d7dbd4 100%
     );
 }
 
 .container {
     display: flex;
-    width: 900px;
+    width: 80%;
+    min-width: 900px;
     background:#ab6363; /*!debug*/
     height: 90vh;
 }
 
 .container .left-bar {
     flex-basis: 35%;
-    background-color: aqua; /*!debug*/
+    background-color: #ffffff; 
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+    background-color: pink; /*!debug*/
+}
+
+.container .header-content,
+.container .footer-content {
+    padding: 20px;
+    background-color: blue; /*!debug*/
 }
 
 .container .main-content {
-    flex-basis: 65%;
-    background-color: pink; /*!debug*/
+    flex-grow: 1;
+    padding: 20px;
+    background-image: url("./img/mine.jpg");
 }
