@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     cursor: default;
     display: flex;
@@ -20,6 +20,8 @@ body {
     );
 }
 
+/* Container */
+
 .container {
     display: flex;
     width: 80%;
@@ -28,11 +30,14 @@ body {
     height: 90vh;
 }
 
-.container .left-bar {
+
+/* Container | Nav Bar */
+.container .nav-bar {
     flex-basis: 35%;
     background-color: #ffffff; 
 }
 
+/*  Container | Content */
 .container .content {
     display: flex;
     flex-direction: column;
@@ -40,14 +45,13 @@ body {
     background-color: pink; /*!debug*/
 }
 
-.container .header-content,
-.container .footer-content {
+.content .header-content,
+.content .footer-content {
     padding: 20px;
     background-color: blue; /*!debug*/
 }
 
-.container .main-content {
+.content .main-content {
     flex-grow: 1;
     padding: 20px;
-    background-image: url("./img/mine.jpg");
-}
+    background-image: url('../img/mine.jpg');
