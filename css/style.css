@@ -18,6 +18,7 @@ body {
         #d7dbd4 15%,
         #d7dbd4 100%
     );
+    font-size: 18px;
 }
 
 /* Utilities */
@@ -30,7 +31,7 @@ body {
 
 .container {
     display: flex;
-    width: 80%;
+    width: 90%;
     min-width: 900px;
     background:#ab6363; /*!debug*/
     height: 90vh;
@@ -47,6 +48,7 @@ body {
 .content .header-content,
 .content .footer-content {
     background-color: blue; /*!debug*/
+    flex-basis: 80px;
 }
 
 .content .main-content {
@@ -64,10 +66,9 @@ body {
 }
 
 .nav-bar .user-id {
-    flex-basis: 50px;
     display: flex;
     align-items: center;
-    background-color: red; /*!debug*/
+    background-color:#eaeaea; 
 }
 
 .nav-bar .notification {
@@ -81,12 +82,18 @@ body {
 
 .nav-bar .user-id {
     display: flex;
-    justify-content: space-around;
+    flex-basis: 80px;
+    justify-content: space-between;
 }
 
-.nav-bar .user-id  .avatar {
-    height: 80px;
-    width: 80px;
+.nav-bar .user-id-left  {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .user-id-left .avatar {
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     overflow: hidden;
 
@@ -94,6 +101,13 @@ body {
 
 .avatar img {
     height: 100%;
+}
+
+.user-id-right i  {
+    font-size: 20px;
+    padding-right: 10px;
+    color: #b1b1b1;
+    cursor: pointer;
 }
 
 
