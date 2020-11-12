@@ -1,0 +1,38 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        to bottom,
+        #009688 0%,
+        #009688 15%,
+        #d2dbcd 15%,
+        #d2dbcd 100%
+    );
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    background:#ab6363; /*!debug*/
+    height: 90vh;
+}
+
+.container .left-bar {
+    flex-basis: 35%;
+    background-color: aqua; /*!debug*/
+}
+
+.container .main-content {
+    flex-basis: 65%;
+    background-color: pink; /*!debug*/
+}
