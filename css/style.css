@@ -1,7 +1,7 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,13 +18,23 @@ body {
         #d7dbd4 15%,
         #d7dbd4 100%
     );
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Utilities */
 
 .pd-20 {
     padding: 20px;
+}
+
+p.small{
+    color: #447a8c;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
 }
 
 /* Container */
@@ -58,7 +68,7 @@ body {
 
 /* Container | Nav bar */
 
-.container .nav-bar{
+.container .nav-bar {
     display: flex;
     flex-direction: column;
     flex-basis: 35%;
@@ -67,22 +77,15 @@ body {
 
 .nav-bar .user-id {
     display: flex;
+    max-height: 80px;
     align-items: center;
     background-color:#eaeaea; 
-}
-
-.nav-bar .notification {
-    display: flex;
-    align-items: center;
-    flex-basis: 50px;
-    background-color: brown;
 }
 
 /*  Nav bar | user id */
 
 .nav-bar .user-id {
     display: flex;
-    flex-basis: 80px;
     justify-content: space-between;
 }
 
@@ -92,8 +95,8 @@ body {
 }
 
 .nav-bar .user-id-left .avatar {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     overflow: hidden;
 
@@ -110,4 +113,52 @@ body {
     cursor: pointer;
 }
 
+/* Nav Bar | Notification */
 
+.nav-bar .notification {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 80px;
+    max-height: 80px;
+    background-color: #74dcff;
+}
+
+.notification .notification-text {
+    flex-direction: column;
+}
+
+.notification i {
+    font-size: 24px;
+    background: white;
+    padding: 15px;
+    color: #74dcff;;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.notification-text p.small {
+    cursor: pointer;
+}
+
+/* Search Bar */
+
+.search {
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+    color:  #b1b1b1;
+}    
+
+.search input{
+    height: 30px;
+    width: 100%;
+    padding-left: 30px;
+    /* border: 1px solid  #fafafa9c; */
+    border: 1px solid  #a22d2d9c; /*!debug*/
+    outline: none;
+}
