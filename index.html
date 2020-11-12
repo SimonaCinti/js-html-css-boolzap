@@ -20,8 +20,8 @@
         <!-- Nav Bar -->
         <aside class="nav-bar">
             <!-- User id -->
-            <div class="user-id pd-20">
-                <div class="user-id-left">
+            <div class="user-id flex items-center pd-20">
+                <div class="user-id-left flex items-center">
                    <div class="avatar">
                         <img :src=" './img/avatar' + user.avatar + '.jpg'" alt="">
                     </div> 
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <!-- Notification -->
-            <div class="notification pd-20">
+            <div class="notification flex items-center pd-20">
                 <i class="fas fa-bell-slash"></i>
                 <div class="notification-text flex">
                     <p>Ricevi notifiche i nuovi messaggi</p>
@@ -49,7 +49,7 @@
             </div>
             <!-- List Contact -->
             <ul class="list-contact">
-                <li v-for="(contact, index) in contacts" class="contact flex">
+                <li v-for="(contact, index) in contacts" class="contact flex items-center">
                     <div class="avatar">
                         <img :src=" './img/avatar'+ contact.avatar +'.jpg'" alt="">
                     </div>
@@ -60,8 +60,8 @@
         <!-- Content -->
         <main class="content flex">
             <!-- Header content -->
-            <div class="header-content pd-20 flex">
-                <div class="contact flex">
+            <div class="header-content pd-20 flex items-center">
+                <div class="contact flex items-center">
                     <div class="avatar">
                         <img src="./img/avatar_1.jpg" alt="">
                     </div>
@@ -80,7 +80,7 @@
             <!-- Main content -->
             <div class="main-content pd-20"></div>
             <!-- Footer content -->
-            <div class="footer-content flex pd-20">
+            <div class="footer-content flex items-center pd-20">
                 <i class="far fa-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>

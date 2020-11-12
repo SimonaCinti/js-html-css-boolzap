@@ -36,7 +36,7 @@ p.small{
     display: flex;
 }
 
-.align-center{
+.items-center{
     align-items: center;
 }
 
@@ -69,7 +69,6 @@ p.small{
 
 .content .header-content,
 .content .footer-content {
-    background-color: blue; /*!debug*/
     flex-basis: 80px;
 }
 
@@ -81,30 +80,17 @@ p.small{
 /* Container | Nav bar */
 
 .container .nav-bar {
-    display: flex;
-    flex-direction: column;
     flex-basis: 35%;
     background-color: #ffffff; 
     border-right: 1px solid #b1b1b1;
 }
 
-.nav-bar .user-id {
-    display: flex;
-    max-height: 80px;
-    align-items: center;
-    background-color:#eaeaea; 
-}
-
 /*  Nav bar | user id */
 
 .nav-bar .user-id {
-    display: flex;
     justify-content: space-between;
-}
-
-.nav-bar .user-id-left  {
-    display: flex;
-    align-items: center;
+    max-height: 80px;
+    background-color:#eaeaea;
 }
 
 .user-id-right i  {
@@ -117,9 +103,7 @@ p.small{
 /* Nav Bar | Notification */
 
 .nav-bar .notification {
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     flex-basis: 80px;
     max-height: 80px;
     background-color: #74dcff;
@@ -147,7 +131,7 @@ p.small{
 
 /* Search Bar */
 
-.search {
+.search  {
     position: relative;
 }
 
@@ -174,7 +158,6 @@ p.small{
 /* List Contact */
 
 .list-contact .contact {
-    align-items: center;
     cursor: pointer;
     transition: all 0.6s;
     padding: 10px 20px;
@@ -193,7 +176,6 @@ p.small{
 .content .header-content,
 .content .footer-content {
     background-color: #eaeaea;
-    align-items: center;
     justify-content: space-between;
     max-height: 80px;
 }
@@ -202,12 +184,10 @@ p.small{
     overflow-y: auto;
 }
 
-
 /* Content | Header */
 
 .header-content .contact {
     max-height: 80px;
-    align-items: center;
     background-color:#eaeaea;
 }
 
