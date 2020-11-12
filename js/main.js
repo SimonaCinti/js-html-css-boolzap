@@ -95,16 +95,10 @@ var app = new Vue({
                 ],
             },
         ],
-        image: '',
+        
     },
     methods: {
 
-        myid(user){
-            return `./img/avatar` + user.avatar + `.jpg`
-        },
-
-        avatar(contact){
-            return `./img/avatar`+contact.avatar+`.jpg`
-        }
     }
 });
+
