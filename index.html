@@ -48,30 +48,12 @@
                  <input type="text" placeholder="Cerca od inizia una nuova chat!">
             </div>
             <!-- List Contact -->
-            <ul class="list-contact pd-20">
-                <li class="contact flex">
+            <ul class="list-contact">
+                <li v-for="(contact, index) in contacts" class="contact flex">
                     <div class="avatar">
                         <img src="./img/avatar_1.jpg" alt="">
                     </div>
-                    <p>Michele</p>
-                </li>
-                <li class="contact flex">
-                    <div class="avatar">
-                        <img src="./img/avatar_2.jpg" alt="">
-                    </div>
-                    <p>Fabio</p>
-                </li>
-                <li class="contact flex">
-                    <div class="avatar">
-                        <img src="./img/avatar_3.jpg" alt="">
-                    </div>
-                    <p>Samuele</p>
-                </li>
-                <li class="contact flex">
-                    <div class="avatar">
-                        <img src="./img/avatar_4.jpg" alt="">
-                    </div>
-                    <p>Luisa</p>
+                    <p>{{ contact.name }}</p>
                 </li>
             </ul>
         </aside>

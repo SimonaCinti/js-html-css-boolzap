@@ -167,9 +167,9 @@ p.small{
 .search input{
     height: 30px;
     width: 100%;
-    padding-left: 30px;
+    padding-left: 50px;
     /* border: 1px solid  #fafafa9c; */
-    border: 1px solid  #a22d2d9c; /*!debug*/
+    border: 2px solid  #1414141a; /*!debug*/
     outline: none;
 }
 
@@ -177,9 +177,9 @@ p.small{
 
 .list-contact .contact {
     align-items: center;
-    margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.6s;
+    padding: 10px 20px;
 }
 
 .contact .avatar{
@@ -198,6 +198,10 @@ p.small{
     align-items: center;
     justify-content: space-between;
     max-height: 80px;
+}
+
+.content .main-content {
+    overflow-y: auto;
 }
 
 
