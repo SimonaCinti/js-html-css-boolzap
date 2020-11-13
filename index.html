@@ -79,16 +79,13 @@
                 
             </div>
             <!-- Main content -->
-            <div class="main-content pd-20" v-for= "messages in contacts[activeUser]">
-                <div :class="['chat-text', messages.status ==='received' ?'receive' :'sent']">{{messages. message}}</div>
+            <div class="main-content pd-20">
 
-                <!-- <div class="chat-text sent">lorem
-                    <p class="time">10/01/2020 15:30</p>
-                </div> -->
+                <div v-for= "(contact, index) in contacts[activeUser].messages" :class="['chat-text', contact.status]">
+                    <p>{{contact.message}}</p>
+                    <p class="time">{{contact.date}}</p>
+                </div>
 
-                <!-- <div class="chat-text receive">Lorem
-                    <p class="time">10/01/2020 15:30</p>
-                </div> -->
             </div>
             <!-- Footer content -->
             <div class="footer-content flex items-center pd-20">

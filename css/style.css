@@ -237,7 +237,7 @@ flex-direction: column;
     background-color: #cbfbb3;
     align-self: flex-end;
 }
-.main-content .receive{
+.main-content .received{
     margin-left: 50px;
     background-color: #ffffff;
     align-self: flex-start;
