@@ -100,10 +100,6 @@ var app = new Vue({
         activeUser : 0,
     },
     methods: {
-        // Check Chat attiva
-        activeChat(index){
-            this.activeUser = index;
-        }
     }
 });
 
