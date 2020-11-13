@@ -80,7 +80,7 @@
             </div>
             <!-- Main content -->
             <div class="main-content pd-20" v-for="(contact, activeUser) in contacts">
-                <div :class="['chat-text', contacts[activeUser].status === 'received' ? 'received' : 'sent'  ]"></div>
+                <div :class="['chat-text', contacts[activeUser].status === 'received' ? 'received' : 'sent'  ]">{{contacts[activeUser].message}}</div>
 
                 <!-- <div class="chat-text sent">lorem
                     <p class="time">10/01/2020 15:30</p>
