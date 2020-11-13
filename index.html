@@ -64,7 +64,7 @@
             <div class="header-content pd-20 flex items-center">
                 <div class="contact flex items-center">
                     <div class="avatar">
-                        <img src="./img/avatar_1.jpg" alt="">
+                        <img :src="`./img/avatar${contacts[activeUser].avatar}.jpg`" alt="">
                     </div>
                     <div class="contact-data flex">
                       <p>{{contacts[activeUser].name}}</p>
