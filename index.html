@@ -68,7 +68,7 @@
                     </div>
                     <div class="contact-data flex">
                       <p>{{contacts[activeUser].name}}</p>
-                    <p class="small">Ultimo accesso oggi alle 10.35</p>
+                    <p class="small">Ultimo accesso alle </p>
                     </div>
                 </div>
                 <div class="contact-data-right flex">
@@ -79,19 +79,16 @@
                 
             </div>
             <!-- Main content -->
-            <div class="main-content pd-20">
-                <div class="chat-text sent">  Hai portato a spasso il cane?
+            <div class="main-content pd-20" v-for="(contact, activeUser) in contacts">
+                <div :class="['chat-text', contacts[activeUser].status === 'received' ? 'received' : 'sent'  ]"></div>
+
+                <!-- <div class="chat-text sent">lorem
                     <p class="time">10/01/2020 15:30</p>
-                </div>
-                <div class="chat-text sent"> Ricordati di dargli da mangiare
+                </div> -->
+
+                <!-- <div class="chat-text receive">Lorem
                     <p class="time">10/01/2020 15:30</p>
-                </div>
-                <div class="chat-text receive">Lorem
-                    <p class="time">10/01/2020 15:30</p>
-                </div>
-                <div class="chat-text receive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, minus et adipisci repellendus veniam perferendis voluptas alias amet cupiditate quia sint illo, exercitationem explicabo numquam voluptate cum est, aperiam veritatis!
-                    <p class="time">10/01/2020 15:30</p>
-                </div>
+                </div> -->
             </div>
             <!-- Footer content -->
             <div class="footer-content flex items-center pd-20">
