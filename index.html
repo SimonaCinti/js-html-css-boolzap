@@ -81,9 +81,9 @@
             <!-- Main content -->
             <div class="main-content pd-20">
 
-                <div v-for= "(contact, index) in contacts[activeUser].messages" :class="['chat-text', contact.status]">
-                    <p>{{contact.message}}</p>
-                    <p class="time">{{contact.date}}</p>
+                <div v-for= "(message, index) in contacts[activeUser].messages" :class="['chat-text',message.status]">
+                    <p>{{message.message}}</p>
+                    <p class="time">{{message.date}}</p>
                 </div>
 
             </div>
