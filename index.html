@@ -18,12 +18,12 @@
     
     <div id="app" class="container flex">
         <!-- Nav Bar -->
-        <aside class="nav-bar">
+        <aside class="nav-bar flex">
             <!-- User id -->
             <div class="user-id flex items-center pd-20">
                 <div class="user-id-left flex items-center">
                    <div class="avatar">
-                        <img :src=" './img/avatar' + user.avatar + '.jpg'" alt="">
+                        <img :src=" `./img/avatar${user.avatar}.jpg`" alt="">
                     </div> 
                     <p>{{user.name}}</p>
                 </div>
@@ -51,7 +51,7 @@
             <ul class="list-contact">
                 <li v-for="(contact, index) in contacts" class="contact flex items-center">
                     <div class="avatar">
-                        <img :src=" './img/avatar'+ contact.avatar +'.jpg'" alt="">
+                        <img :src=" `./img/avatar${contact.avatar}.jpg` " :alt="contact.name">
                     </div>
                     <p>{{ contact.name }}</p>
                 </li>

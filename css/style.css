@@ -157,8 +157,13 @@ p.small{
 
 /* Nav bar | List Contact */
 
-ul.list-contact{
+.nav-bar {
+flex-direction: column;
+}
+
+.list-contact{
     overflow-y: auto;
+    flex-grow: 1;
 }
 
 .list-contact .contact {
