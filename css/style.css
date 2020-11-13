@@ -129,7 +129,7 @@ p.small{
     color: #447a8c;
 }
 
-/* Search Bar */
+/* Nav bar | Search Bar */
 
 .search  {
     position: relative;
@@ -155,7 +155,11 @@ p.small{
   color: #b1b1b1 
 }
 
-/* List Contact */
+/* Nav bar | List Contact */
+
+ul.list-contact{
+    overflow-y: auto;
+}
 
 .list-contact .contact {
     cursor: pointer;
@@ -184,7 +188,7 @@ p.small{
     overflow-y: auto;
 }
 
-/* Content | Header */
+/* Content | Header Content*/
 
 .header-content .contact {
     max-height: 80px;
@@ -202,7 +206,7 @@ p.small{
     cursor: pointer;
 }
 
-/* Content | Footer */
+/* Content | Footer Content*/
 
 .footer-content i {
     color: #697376;
