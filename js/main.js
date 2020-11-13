@@ -94,11 +94,16 @@ var app = new Vue({
                     }
                 ],
             },
+            
         ],
-        
+        // Index Chat attiva
+        activeUser : 0,
     },
     methods: {
-
+        activeChat(index){
+            this.activeUser = index;
+            console.log(index);
+        }
     }
 });
 

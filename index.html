@@ -49,7 +49,8 @@
             </div>
             <!-- List Contact -->
             <ul class="list-contact">
-                <li v-for="(contact, index) in contacts" class="contact flex items-center">
+                <li v-for="(contact, index) in contacts"
+                @click="activeChat(index)" class="contact flex items-center">
                     <div class="avatar">
                         <img :src=" `./img/avatar${contact.avatar}.jpg` " :alt="contact.name">
                     </div>
@@ -66,7 +67,7 @@
                         <img src="./img/avatar_1.jpg" alt="">
                     </div>
                     <div class="contact-data flex">
-                      <p>Michele</p>
+                      <p>{{contacts[activeUser].name}}</p>
                     <p class="small">Ultimo accesso oggi alle 10.35</p>
                     </div>
                 </div>
