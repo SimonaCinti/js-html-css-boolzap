@@ -168,7 +168,7 @@ flex-direction: column;
 
 .list-contact .contact {
     cursor: pointer;
-    transition: all 0.6s;
+    transition: hover 0.6s;
     padding: 10px 20px;
 }
 
@@ -177,6 +177,10 @@ flex-direction: column;
 }
 
 .contact:hover {
+    background-color: #eaeaea;
+}
+
+.contact.active{
     background-color: #eaeaea;
 }
 

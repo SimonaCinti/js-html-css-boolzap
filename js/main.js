@@ -4,6 +4,8 @@
 var app = new Vue({
     el: '#app',
     data: {
+        // Index Chat attiva
+        activeUser: 0,
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -96,8 +98,6 @@ var app = new Vue({
             },
             
         ],
-        // Index Chat attiva
-        activeUser : 0,
     },
     methods: {
     }

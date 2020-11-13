@@ -50,7 +50,7 @@
             <!-- List Contact -->
             <ul class="list-contact">
                 <li v-for="(contact, index) in contacts"
-                @click="activeUser = index" class="contact flex items-center">
+                @click="activeUser = index" :class="['contact flex items-center', activeUser === index ? 'active' :'']">
                     <div class="avatar">
                         <img :src=" `./img/avatar${contact.avatar}.jpg` " :alt="contact.name">
                     </div>
