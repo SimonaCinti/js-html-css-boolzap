@@ -112,7 +112,9 @@ var app = new Vue({
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
-                setTimeout(autoAnswer(index), 3000);
+                setTimeout(() => {
+                    this.autoAnswer(index)
+                }, 1000);
                 this.userMessage = ''
             }
             else {
