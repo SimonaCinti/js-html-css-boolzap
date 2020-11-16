@@ -112,12 +112,21 @@ var app = new Vue({
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
+                setTimeout(autoAnswer(index), 3000);
                 this.userMessage = ''
             }
             else {
                 this.userMessage = ''
             }
             
+        },
+
+        autoAnswer(index){
+            this.contacts[index].messages.push({
+                message: 'ok',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                status: 'received'
+            });
         }
     }
 });
