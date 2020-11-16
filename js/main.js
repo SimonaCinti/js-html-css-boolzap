@@ -9,7 +9,7 @@ var app = new Vue({
         // nostro account
         user: {
             name: 'Nome Utente',
-            avatar: '_io'
+            avatar: '_io',
         },
         // Elenco contatti
         contacts: [
@@ -98,8 +98,18 @@ var app = new Vue({
             },
             
         ],
+        userMessage: ''
     },
     methods: {
+        // Send message
+        send(){
+            if (this.userMessage.trim() !== ''){
+                console.log(this.userMessage);
+            }else {
+                this.userMessage = ''
+            }
+            
+        }
     }
 });
 
