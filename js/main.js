@@ -104,17 +104,15 @@ var app = new Vue({
     },
     methods: {
         // Send message
-        send(index){
+        send(){
             if (this.userMessage.trim() !== ''){
-                this.contacts[index].messages.push({
+                this.contacts[this.activeUser].messages.push({
                         message: this.userMessage,
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
                 // Auto answer after 1 sec
-                setTimeout(() => {
-                    this.autoAnswer(index)
-                }, 1000);
+                setTimeout(this.autoAnswer, 1000);
                 this.userMessage = ''
             }
             else {
@@ -123,8 +121,8 @@ var app = new Vue({
             
         },
         // Auto answer
-        autoAnswer(index){
-            this.contacts[index].messages.push({
+        autoAnswer(){
+            this.contacts[this.activeUser].messages.push({
                 message: 'ok',
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 status: 'received'
