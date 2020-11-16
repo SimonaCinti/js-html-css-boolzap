@@ -106,12 +106,12 @@ var app = new Vue({
         // Send message
         send(index){
             if (this.userMessage.trim() !== ''){
-                console.log(this.userMessage);
                 this.contacts[index].messages.push({
                         message: this.userMessage,
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
+                // Auto answer after 1 sec
                 setTimeout(() => {
                     this.autoAnswer(index)
                 }, 1000);
@@ -122,7 +122,7 @@ var app = new Vue({
             }
             
         },
-
+        // Auto answer
         autoAnswer(index){
             this.contacts[index].messages.push({
                 message: 'ok',
