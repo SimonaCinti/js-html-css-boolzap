@@ -90,7 +90,7 @@
             <!-- Footer content -->
             <div class="footer-content flex items-center pd-20">
                 <i class="far fa-smile"></i>
-                <input v-model="userMessage" @keyup.enter="send"type="text" placeholder="Scrivi un messaggio">
+                <input v-model="userMessage" @keyup.enter="send(activeUser)"type="text" placeholder="Scrivi un messaggio">
                 <i class="fas fa-microphone"></i>
             </div>
         </main>

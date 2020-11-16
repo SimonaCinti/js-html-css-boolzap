@@ -6,6 +6,8 @@ var app = new Vue({
     data: {
         // Index Chat attiva
         activeUser: 0,
+        // UserMessage input log
+        userMessage: '',
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -98,14 +100,21 @@ var app = new Vue({
             },
             
         ],
-        userMessage: ''
+        
     },
     methods: {
         // Send message
-        send(){
+        send(index){
             if (this.userMessage.trim() !== ''){
                 console.log(this.userMessage);
-            }else {
+                this.contacts[index].messages.push({
+                        message: this.userMessage,
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
+                        status: 'sent'
+                });
+                this.userMessage = ''
+            }
+            else {
                 this.userMessage = ''
             }
             
