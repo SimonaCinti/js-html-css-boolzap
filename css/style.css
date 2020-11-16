@@ -244,12 +244,38 @@ flex-direction: column;
     margin-right: 50px;
     background-color: #cbfbb3;
     align-self: flex-end;
+    position: relative;
 }
+
+.main-content .sent::before{
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: -8px;
+	width: 0;
+	height: 0;
+	border-top: 25px solid #cbfbb3;
+	border-right: 15px solid transparent;
+}
+
+
 .main-content .received{
     margin-left: 50px;
     background-color: #ffffff;
     align-self: flex-start;
+    position: relative;
 
+}
+
+.main-content .received::before{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: -8px;
+	width: 0;
+	height: 0;
+	border-top: 25px solid white;
+	border-left: 15px solid transparent;
 }
 
 .chat-text .time {
