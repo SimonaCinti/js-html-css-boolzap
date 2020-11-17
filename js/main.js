@@ -9,7 +9,7 @@ var app = new Vue({
         // UserMessage input log
         userMessage: '',
         // searchUserinput log
-        searchUser: '',
+        searchInput: '',
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -130,7 +130,16 @@ var app = new Vue({
             }
             
         },
-        
+        searchUser(){
+            this.contacts.forEach((element) =>{
+                if (element.name.toLowerCase().includes(this.searchInput.toLowerCase())){
+                     element.visible = true;
+                }
+                else {
+                     element.visible = false;
+                }
+            });            
+        }
     }
 });
 
