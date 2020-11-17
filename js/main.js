@@ -130,6 +130,7 @@ var app = new Vue({
             }
             
         },
+        // Search user by Input
         searchUser(){
             this.contacts.forEach((element) =>{
                 if (element.name.toLowerCase().includes(this.searchInput.toLowerCase())){
