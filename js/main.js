@@ -106,28 +106,28 @@ var app = new Vue({
         // Send message
         send(){
             if (this.userMessage.trim() !== ''){
-                this.contacts[this.activeUser].messages.push({
-                        message: this.userMessage,
+
+                const sentMessage = this.contacts[this.activeUser].messages;
+                sentMessage.push({
+                        message: this.userMessage.trim(),
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
                 // Auto answer after 1 sec
-                setTimeout(this.autoAnswer, 1000);
-                this.userMessage = ''
+                setTimeout(()=>{
+                    sentMessage.push({
+                        message: 'ok',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                        status: 'received'
+                    });
+                }, 1000);
+                this.userMessage = '';
             }
             else {
-                this.userMessage = ''
+                this.userMessage = '';
             }
             
         },
-        // Auto answer
-        autoAnswer(){
-            this.contacts[this.activeUser].messages.push({
-                message: 'ok',
-                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                status: 'received'
-            });
-        }
     }
 });
 
