@@ -141,7 +141,7 @@ var app = new Vue({
                 }
             });            
         },
-
+        // Get last log in time
         getTime() {
             const status = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1].status;
             const date = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1].date;
