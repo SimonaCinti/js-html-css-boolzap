@@ -8,6 +8,8 @@ var app = new Vue({
         activeUser: 0,
         // UserMessage input log
         userMessage: '',
+        // searchUserinput log
+        searchUser: '',
         // nostro account
         user: {
             name: 'Nome Utente',
