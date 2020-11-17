@@ -69,8 +69,8 @@
                         <img :src="`./img/avatar${contacts[activeUser].avatar}.jpg`" alt="">
                     </div>
                     <div class="contact-data flex">
-                      <p>{{contacts[activeUser].name}}</p>
-                    <p class="small">Ultimo accesso alle </p>
+                        <p>{{contacts[activeUser].name}}</p>
+                        <p class="small">Ultimo accesso alle </p>
                     </div>
                 </div>
                 <div class="contact-data-right flex">
@@ -82,12 +82,10 @@
             </div>
             <!-- Main content -->
             <div class="main-content pd-20">
-
                 <div v-for= "(message, index) in contacts[activeUser].messages" :class="['chat-text',message.status]">
                     <p>{{message.message}}</p>
                     <p class="time">{{message.date}}</p>
                 </div>
-
             </div>
             <!-- Footer content -->
             <div class="footer-content flex items-center pd-20">

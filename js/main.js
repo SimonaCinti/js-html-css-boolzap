@@ -102,6 +102,7 @@ var app = new Vue({
             },
             
         ],
+        lastLog: '',
         
     },
     methods: {
@@ -140,7 +141,8 @@ var app = new Vue({
                      element.visible = false;
                 }
             });            
-        }
+        },
+        
     }
 });
 
