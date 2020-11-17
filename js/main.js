@@ -146,7 +146,8 @@ var app = new Vue({
             dateUser = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1];
             if (dateUser.status ==='received'){
                 return dateUser.date
-            }          
+            }
+            return null          
         }    
     }
 });

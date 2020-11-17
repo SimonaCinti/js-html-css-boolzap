@@ -70,7 +70,8 @@
                     </div>
                     <div class="contact-data flex">
                         <p>{{contacts[activeUser].name}}</p>
-                        <p class="small">Ultimo accesso alle {{getTime()}} </p>
+                        <p v-show="getTime()"class="small">Ultimo accesso alle {{getTime()}} </p>
+                        <p v-show="!getTime()"class="small">Sta scrivendo... </p>
                     </div>
                 </div>
                 <div class="contact-data-right flex">
