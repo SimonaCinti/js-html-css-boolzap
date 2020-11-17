@@ -101,7 +101,7 @@ var app = new Vue({
                 ],
             },
         ],
-        
+        dateUser: ''
         
     },
     methods: {
@@ -143,10 +143,9 @@ var app = new Vue({
         },
         // Get last log in time
         getTime() {
-            const status = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1].status;
-            const date = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1].date;
-            if (status ==='received'){
-                return date
+            dateUser = this.contacts[this.activeUser].messages[this.contacts[this.activeUser].messages.length - 1];
+            if (dateUser.status ==='received'){
+                return dateUser.date
             }          
         }    
     }
