@@ -72,11 +72,6 @@ p.small{
     flex-basis: 80px;
 }
 
-.content .main-content {
-    flex-grow: 1;
-    background-image: url('../img/mine.jpg');
-}
-
 /* Container | Nav bar */
 
 .container .nav-bar {
@@ -197,9 +192,14 @@ flex-direction: column;
     max-height: 80px;
 }
 
+
 .content .main-content {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/mine.jpg');
     overflow-y: auto;
 }
+
 
 /* Content | Header Content*/
 

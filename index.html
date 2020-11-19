@@ -82,7 +82,7 @@
                 
             </div>
             <!-- Main content -->
-            <div class="main-content pd-20">
+            <div ref="chatContainer"class="main-content pd-20">
                 <div v-for= "(message, index) in contacts[activeUser].messages" :class="['chat-text',message.status]">
                     <p>{{message.message}}</p>
                     <p class="time">{{message.date}}</p>

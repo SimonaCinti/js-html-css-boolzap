@@ -100,6 +100,80 @@ var app = new Vue({
                     }
                 ],
             },
+            {
+                name: 'Maurizio',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 18:30:55',
+                        message: 'Sei andato poi al cinema?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 18:50:00',
+                        message: 'No, vado domani sera. Vuoi venire?',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Claudio',
+                avatar: '_6',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 18:50:00',
+                        message: 'Ti va bene per domani?',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Massimo',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 18:50:00',
+                        message: 'Alla fine l\'ho preso su amazon',
+                        status: 'received'
+                    },
+                    {
+                        date: '11/01/2020 10:50:00',
+                        message: 'Anche io!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '11/01/2020 12:50:00',
+                        message: 'Che affare che abbiamo fatto!',
+                        status: 'received'
+                    },
+                ],
+            },
+            {
+                name: 'Vittorio',
+                avatar: '_8',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 18:50:00',
+                        message: 'Ma sei online?',
+                        status: 'received'
+                    },
+                    {
+                        date: '11/01/2020 11:10:00',
+                        message: 'Ero al telefono, scusami',
+                        status: 'sent'
+                    },
+                    {
+                        date: '11/01/2020 12:50:00',
+                        message: 'Quindi vieni domani?',
+                        status: 'received'
+                    },
+                ],
+
+            },
         ],
         dateUser: ''
         
@@ -115,6 +189,7 @@ var app = new Vue({
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss') ,
                         status: 'sent'
                 });
+                this.scrollToEnd();
                 // Auto answer after 1 sec
                 setTimeout(()=>{
                     sentMessage.push({
@@ -122,8 +197,11 @@ var app = new Vue({
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         status: 'received'
                     });
+                    this.scrollToEnd();
                 }, 1000);
+                
                 this.userMessage = '';
+                
             }
             else {
                 this.userMessage = '';
@@ -148,6 +226,12 @@ var app = new Vue({
                 return dateUser.date
             }
             return null          
-        }    
-    }
+        },
+        // Auto scroll to end for chat
+        scrollToEnd (){
+            setTimeout(() =>{
+                this.$refs.chatContainer.scrollTop = this.$refs.chatContainer.scrollHeight; 
+            },10) 
+        }
+    },
 });
