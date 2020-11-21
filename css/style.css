@@ -301,11 +301,6 @@ flex-direction: column;
     opacity: 1; 
 }
 
-.chat-text i:focus {
-    opacity: 1;
-    color: black;
-}
-
 .cancel {
 	background-color: #eaeaea;
 	border-radius: 5px;
