@@ -6,10 +6,14 @@ var app = new Vue({
     data: {
         // Index Chat attiva
         activeUser: 0,
+        // Index Menu Chat attivo
+        activeMenu: 0,
         // UserMessage input log
         userMessage: '',
         // searchUserinput log
         searchInput: '',
+        //
+        isShown: false,
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -232,6 +236,15 @@ var app = new Vue({
             setTimeout(() =>{
                 this.$refs.chatContainer.scrollTop = this.$refs.chatContainer.scrollHeight; 
             },10) 
+        },
+        // Hide&Show cancel menu
+        showMenu(index){
+            this.activeMenu = index;
+            this.isShown =! this.isShown
+        },
+        // Cancel message
+        cancelMessage(index){
+            this.contacts[this.activeUser].messages.splice(index, 1);
         }
     },
 });

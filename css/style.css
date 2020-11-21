@@ -286,6 +286,40 @@ flex-direction: column;
     margin-top: 5px;
 }
 
+.chat-text i {
+    color: grey;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity, 0.5s;
+}
+
+.chat-text:hover i{
+    opacity: 1; 
+}
+
+.chat-text i:focus {
+    opacity: 1;
+    color: black;
+}
+
+.cancel {
+	background-color: #eaeaea;
+	border-radius: 5px;
+	position: absolute;
+	top: 21px;
+	right: 17px;
+    padding: 5px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.cancel:hover {
+    background-color: #a5a5a5;
+}
 
 /* Content | Footer Content*/
 
