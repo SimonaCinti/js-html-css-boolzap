@@ -245,6 +245,7 @@ var app = new Vue({
         // Cancel message
         cancelMessage(index){
             this.contacts[this.activeUser].messages.splice(index, 1);
+            this.isShown = false
         }
     },
 });
