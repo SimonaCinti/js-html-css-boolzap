@@ -85,7 +85,7 @@
             <div ref="chatContainer"class="main-content pd-20">
                 <div v-for= "(message, index) in contacts[activeUser].messages" :class="['chat-text',message.status]">
                     <i v-if="message.status === 'sent'" class="fas fa-sort-down" @click="showMenu(index)"></i>
-                    <div v-if="isShown && message.status === 'sent' && index === activeMenu" class="cancel" @click="cancelMessage(index)">delete message</div>
+                    <div v-show="isShown && message.status === 'sent' && index === activeMenu" class="cancel" @click="cancelMessage(index)">delete message</div>
                     <p>{{message.message}}</p>
                     <p class="time">{{message.date}}</p>
                 </div>
